@@ -2,6 +2,8 @@
 
 5-longest-palindromic-substring
 
+8-string-to-integer-atoi
+
 # Problems easy complexity:
 
 88-merge-sorted-array
