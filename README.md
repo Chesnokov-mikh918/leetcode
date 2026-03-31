@@ -1,8 +1,8 @@
-Problems of medium complexity:
+# Problems of medium complexity:
 
 5-longest-palindromic-substring
 
-Problems easy complexity:
+# Problems easy complexity:
 
 88-merge-sorted-array
 
@@ -17,4 +17,5 @@ Problems easy complexity:
 125-valid-palindrome
 
 118-pascals-triangle
+
 
