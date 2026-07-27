@@ -1,8 +1,13 @@
 class Solution:
     def maximumStrongPairXor(self, nums: List[int]) -> int:
         max_xor = 0
-        for i in range(0, len(nums)):
-            for j in range(i, len(nums)):
-                if (abs(nums[i] - nums[j]) <= min(nums[i], nums[j])):
-                    max_xor = max(max_xor, nums[i] ^ nums[j])
+        nums.sort()
+        i = 0
+        for j in range(0, len(nums)):
+            while (nums[j] > 2*nums[i]):
+                i += 1
+            for k in range(i, j + 1):
+                max_xor = max(max_xor, nums[k] ^ nums[j])
         return max_xor
+
+
