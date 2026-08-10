@@ -5,8 +5,10 @@ class Solution:
     def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
         result = []
         intervals.sort(key=lambda val: (val[1], val[0]))
-        result.append(intervals[0])
+        result = intervals[0]
+        count = 1
         for i in range(1, len(intervals)):
-            if not self.is_overlapping(result[-1], intervals[i]):
-                result.append(intervals[i])
-        return len(intervals) - len(result)
+            if not self.is_overlapping(result, intervals[i]):
+                result = intervals[i]
+                count += 1
+        return len(intervals) - count
